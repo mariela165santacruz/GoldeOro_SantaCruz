@@ -1,16 +1,11 @@
+import { react } from '@babel/types';
 import React from 'react';
 import reactDom from 'react-dom';
-import ReactDOM from 'react-dom';
+import App from './App';
 
 reactDom.render(
-  <div>
-    WingSports
-      <ul>
-        <li>Inicio</li>
-        <li>Categorias</li>
-        <li>Productos</li>
-        <li>Carrito</li>
-      </ul>
-  </div>,
-  document.getElementById("root")
-);
+  <React.StrictMode>
+    <App></App>
+  </React.StrictMode>,
+  document.getElementById('root')
+)
