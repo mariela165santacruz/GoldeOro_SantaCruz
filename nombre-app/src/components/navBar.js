@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "../App.css";
 import logo from "./img/atlas-solid.svg";
-import CartWidget from "./component/CartWidget/CartWidget";
+import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
