@@ -1,51 +1,49 @@
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import "../App.css";
+import logo from "./img/atlas-solid.svg";
+import CartWidget from "./component/CartWidget/CartWidget";
 
-function navBar() {
-    return (
-        <div>
-                <>
-            <Navbar bg="light">
-                <Container>
-                <Navbar.Brand href="#home">Mi ecommerce</Navbar.Brand>
-                </Container>
-            </Navbar>
-            <br />
-            <Navbar bg="light">
-                <Container>
-                <Navbar.Brand>Brand text</Navbar.Brand>
-                </Container>
-            </Navbar>
-            <br />
-            <Navbar bg="dark">
-            <Container>
-                <Navbar.Brand href="#home">
-                <img
-                    src="/logo.svg"
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top"
-                    alt="React Bootstrap logo"
-                />
-                </Navbar.Brand>
-            </Container>
-            </Navbar>
-            <br />
-            <Navbar bg="dark" variant="dark">
-                <Container>
-                <Navbar.Brand href="#home">
-                    <img
-                    alt=""
-                    src="/logo.svg"
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top"
-                    />{' '}
-                React Bootstrap
-                </Navbar.Brand>
-                </Container>
-            </Navbar>
-            </>
-        </div>
-    );
+function NavBar() {
+  return (
+    <div className="App">
+      <Navbar
+        bg="dark"
+        variant="dark"
+        sticky="top"
+        expand="sm"
+        collapseOnSelect
+        className="px-4"
+      >
+        <Navbar.Brand>
+          <img className="logo" src={logo} width="40px" height="40px" />
+          <h1 className="d-inline fs-4 align-middle px-3">Learning 2.0</h1>
+        </Navbar.Brand>
+
+        <Navbar.Toggle className="coloring" />
+        <Navbar.Collapse>
+          <Nav>
+            <NavDropdown title="Productos">
+              <NavDropdown.Item href="#productos/tea">Libros</NavDropdown.Item>
+              <NavDropdown.Item href="#productos/coffee">PDF</NavDropdown.Item>
+              <NavDropdown.Item href="#productos/chocolate">
+                Videos
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#productos/promo">
+                Cursos
+              </NavDropdown.Item>
+            </NavDropdown>
+
+            <Nav.Link href="blog">Blog</Nav.Link>
+            <Nav.Link href="nosotros">Nosotros</Nav.Link>
+            <Nav.Link href="contacto">Contacto</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+        <CartWidget />
+      </Navbar>
+    </div>
+  );
 }
-
-export default navBar;
+export default NavBar;
