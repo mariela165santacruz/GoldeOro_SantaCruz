@@ -5,7 +5,7 @@ import ItemListContainer from "./components/ItemListContainer";
 function App() {
   return (
     <div>
-      <NavBar />{" "}
+      <navBar />{" "}
       <ItemListContainer greeting=" ItemListContainer provisional " />
     </div>
   );

@@ -5,7 +5,7 @@ import "../App.css";
 import logo from "./img/atlas-solid.svg";
 import CartWidget from "./CartWidget";
 
-function NavBar() {
+function navBar() {
   return (
     <div className="App">
       <Navbar
@@ -46,4 +46,4 @@ function NavBar() {
     </div>
   );
 }
-export default NavBar;
+export default navBar;
