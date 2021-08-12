@@ -1,44 +1,65 @@
-import React from "react";
-import reactDom from "react-dom";
+import { React, useState, useEffect } from "react";
+// CON PROP greeting Y MUESTRA EL MENSAJE DENTRO DEL CONTENEDOR CON EL STYLING INTEGRADO.
 // IMPORTARLO DENTRO DE APP.JS
+import ItemCount from "./ItemCount";
+import ItemList from "./ItemList";
+
+// Creo un array de objetos con mis productos
+let remoteItems = [
+  {
+    id: 0,
+    title: "producto1",
+    price: 300,
+    pictureUrl:
+      "https://www.mountsinai.on.ca/wellbeing/images/image-placeholder/image",
+  },
+  {
+    id: 1,
+    title: "producto2",
+    price: 400,
+    pictureUrl:
+      "https://www.mountsinai.on.ca/wellbeing/images/image-placeholder/image",
+  },
+  {
+    id: 2,
+    title: "producto3",
+    price: 500,
+    pictureUrl:
+      "https://www.mountsinai.on.ca/wellbeing/images/image-placeholder/image",
+  },
+  {
+    id: 3,
+    title: "producto4",
+    price: 600,
+    pictureUrl:
+      "https://www.mountsinai.on.ca/wellbeing/images/image-placeholder/image",
+  },
+];
 
 function ItemListContainer(props) {
-  return <div className="fs-2 text-center">{props.greeting}</div>;
+  // creo un efecto de montaje para emitir un llamado asincrónico
+  const [items, setItems] = useState([]);
+  useEffect(
+    () => {
+      setTimeout(async () => {
+        setItems(remoteItems);
+      }, 3000);
+      //espera unos segs y setea el estado items a remoteItems
+    },
+    [
+      /*Lista de dependencias (o variables que quiero escuchar para re-renderear)*/
+    ]
+  );
+  return (
+    <div className="fs-2 text-center">
+      {props.greeting}
+      <br></br>
+      <ItemCount stock={5} initial={1} />
+      <br></br>
+      <ItemList items={items} />
+    </div>
+  );
 }
 
 export default ItemListContainer;
-
-const { useState } = React
-const Button = ({ increment, onClickFunction }) => {
-const handleClick = () => {
-onClickFunction(increment)
-}
-return <button onClick={handleClick}>+{increment}</button>
-}
-
-
-const App = () => {
-const [count, setCount] = useState(0)
-
-
-const incrementCount = increment => {
-setCount(count + increment)
-}
-
-
-return (
-  
-<div>
-<navBar />{" "}
-      <ItemListContainer greeting=" CONTADOR " />
-<Button increment={1} onClickFunction={incrementCount} />
-<Button increment={10} onClickFunction={incrementCount} />
-<Button increment={100} onClickFunction={incrementCount} />
-<Button increment={1000} onClickFunction={incrementCount} />
-<span>{count}</span>
-</div>
-)
-}
-
-
-reactDom.render(<App/>, document.getElementById('app'))
+© 2021 GitHub, Inc.
