@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./Components/Navbar";
-import ItemListContainer from "./components/ItemListContainer";
+import ItemListContainer from "./Components/ItemListContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Router from "./Router/Router";
 function App() {

@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "../App.css";
-//import logo from "./img/logo.png";
+import logo from "./img/logo.png";
 import CartWidget from "./CartWidget";
 import { Link, useHistory, NavLink } from "react-router-dom";
 
