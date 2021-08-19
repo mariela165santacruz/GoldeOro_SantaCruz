@@ -5,6 +5,7 @@ import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import ItemDetailContainer from "./ItemDetailContainer";
 import { useParams } from "react-router-dom";
+import { devolverProd } from "./Productos.js";
 
 // Creo un array de objetos con mis productos
 let remoteItems = [
@@ -66,5 +67,7 @@ function ItemListContainer(props) {
   //   <ItemList items={items} />
   // </div>
 }
+const [productos, setProductos] = useState([])
+setProductos(devolverProd());
 
 export default ItemListContainer;

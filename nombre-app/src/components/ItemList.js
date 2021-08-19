@@ -15,7 +15,20 @@ function addItem({ id, price, title, pictureUrl, category }, index) {
 }
 // acá creo un div para contener y poder darle flexibilidad a los items que se generan
 function ItemList({ items }) {
-  return <div className="d-inline-flex">{items.map(addItem)}</div>;
+  return (
+    <div className="d-inline-flex">
+      {items.map(item => {
+        return (
+          <Item
+            key={item.index}
+            id={item.id}
+            title={item.title}
+            price={item.price}
+            pictureUrl={item.pictureUrl}
+            category={item.category}
+          />
+        )
+      })}
+    </div>);
 }
-
 export default ItemList;
