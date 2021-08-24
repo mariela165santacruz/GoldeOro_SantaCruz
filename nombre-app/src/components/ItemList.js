@@ -1,34 +1,38 @@
-import React from "react";
 import Item from "./Item";
 import "bootstrap/dist/css/bootstrap.min.css";
-function addItem({ id, price, title, pictureUrl, category }, index) {
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+
+function addItem({ id, price, title, pictureUrl, category, stock }, index) {
   return (
-    <Item
-      key={index}
-      id={id}
-      title={title}
-      price={price}
-      pictureUrl={pictureUrl}
-      category={category}
-    />
+    <div className="">
+      <Item
+        key={index}
+        id={id}
+        title={title}
+        price={price}
+        pictureUrl={pictureUrl}
+        category={category}
+        stock={stock}
+      />
+    </div>
   );
 }
-// acá creo un div para contener y poder darle flexibilidad a los items que se generan
+
 function ItemList({ items }) {
-  return (
-    <div className="d-inline-flex">
-      {items.map(item => {
-        return (
-          <Item
-            key={item.index}
-            id={item.id}
-            title={item.title}
-            price={item.price}
-            pictureUrl={item.pictureUrl}
-            category={item.category}
-          />
-        )
-      })}
-    </div>);
+  //guardo en el localStorage
+  useEffect(() => {
+    localStorage.setItem("items", JSON.stringify(items));
+  }, [items]);
+
+  //creo un parametro por id
+  const { categoryId } = useParams();
+  //filtro
+  return categoryId
+    ? items
+        .filter((products) => products.category == categoryId)
+        .map((products) => addItem(products))
+    : items.map((products) => addItem(products));
 }
+
 export default ItemList;

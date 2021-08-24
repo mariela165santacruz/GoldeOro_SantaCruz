@@ -37,4 +37,4 @@ let remoteItems = [
   function devolverProd(){
     return productos
  }
- export default devolverProd
+ export default devolverProd;
