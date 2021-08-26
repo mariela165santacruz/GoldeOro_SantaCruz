@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Router from "./Router/Router";
-
+import { CartProvider } from "./Components/Context/CartContext";
 
 function App() {
   return (
@@ -13,5 +13,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
