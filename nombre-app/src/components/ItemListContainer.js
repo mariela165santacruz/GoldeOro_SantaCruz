@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import  {AllProducts}  from "../helpers/AllProducts";
+import { AllProducts } from "../helpers/AllProducts";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function ItemListContainer(props) {

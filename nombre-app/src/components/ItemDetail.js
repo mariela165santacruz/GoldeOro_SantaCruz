@@ -7,11 +7,8 @@ import { CartContext } from "./Context/CartContext";
 
 function ItemDetail({ item }) {
   const [selectedItem, setSelectedItem] = useState(0);
-  //me traigo la función addItem de mi context
   const { addItem } = useContext(CartContext);
 
-  //CLASE 9
-  /*  const [quantityToAdd, setQuantityToAdd] = useState(0); */
   const onAdd = (quantity) => {
     setSelectedItem(quantity);
     addItem(item, quantity);
@@ -19,7 +16,7 @@ function ItemDetail({ item }) {
 
   return (
     <Card className="text-center m-auto" style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={item.pictureUrl} />
+      <Card.Img variant="top" src={item} />
       <Card.Body>
         <Card.Title>{item.title}</Card.Title>
         <Card.Text>Detalle del producto.</Card.Text>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 
 import { useParams } from "react-router-dom";
-import { remoteItems} from "../helpers/AllProducts";
+import { remoteItems } from "../helpers/AllProducts";
 
 function ItemDetailContainer() {
   const [item, setItem] = useState({});
@@ -13,6 +13,7 @@ function ItemDetailContainer() {
     setItem(UnItem);
   };
 
+  // ACÁ REEMPLAZAR POR PRODUCTOS DE FIRESTORE
   useEffect(() => {
     getItem(itemId);
   }, []);
