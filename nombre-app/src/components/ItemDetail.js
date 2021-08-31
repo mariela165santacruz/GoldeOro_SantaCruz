@@ -16,7 +16,7 @@ function ItemDetail({ item }) {
 
   return (
     <Card className="text-center m-auto" style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={item} />
+      <Card.Img variant="top" src={item.pictureUrl} />
       <Card.Body>
         <Card.Title>{item.title}</Card.Title>
         <Card.Text>Detalle del producto.</Card.Text>
