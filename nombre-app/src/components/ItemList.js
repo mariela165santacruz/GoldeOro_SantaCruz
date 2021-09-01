@@ -1,30 +1,38 @@
-import React, { useEffect, useState } from "react";
-import ItemDetail from "./ItemDetail";
-
+import Item from "./Item";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { useParams } from "react-router-dom";
-import { remoteItems } from "../helpers/AllProducts";
+import { useEffect } from "react";
 
-function ItemDetailContainer() {
-  const [item, setItem] = useState({});
-  const { itemId } = useParams();
-
-  const getItem = (itemId) => {
-    const UnItem = remoteItems.find((el) => el.id == itemId);
-    setItem(UnItem);
-  };
-
-  // ACÁ REEMPLAZAR POR PRODUCTOS DE FIRESTORE
-  useEffect(() => {
-    getItem(itemId);
-  }, []);
-
-  return <ItemDetail className="" item={item} />;
-  // return (
-  //   <>
-  //     {loading && <h1>Cargando...</h1>}
-  //     {!loading && <ItemDetail className="" item={item} />}
-  //   </>
-  // );
+function addItem({ id, price, title, pictureUrl, category, stock }, index) {
+  return (
+    <div className="">
+      <Item
+        key={index}
+        id={id}
+        title={title}
+        price={price}
+        pictureUrl={pictureUrl}
+        category={category}
+        stock={stock}
+      />
+    </div>
+  );
 }
 
-export default ItemDetailContainer;
+function ItemList({ items }) {
+  //guardo en el localStorage
+  useEffect(() => {
+    localStorage.setItem("items", JSON.stringify(items));
+  }, [items]);
+
+  //creo un parametro por id
+  const { categoryId } = useParams();
+  //filtro
+  return categoryId
+    ? items
+        .filter((products) => products.categoryName == categoryId)
+        .map((products) => addItem(products))
+    : items.map((products) => addItem(products));
+}
+
+export default ItemList;
