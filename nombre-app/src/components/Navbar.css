@@ -9,4 +9,6 @@
   .navbar {
     flex: wrap !important;
     height: auto !important;
+    position: fixed;
+    width: 100%;
   }

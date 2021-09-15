@@ -2,10 +2,10 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Item({ id, title, price, pictureUrl }) {
+function Item({ id, title, price, images }) {
   return (
     <Card style={{ width: "18rem", height: "648px" }}>
-      <Card.Img variant="top" src={pictureUrl} />
+      <Card.Img variant="top" src={images} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>Detalle del producto.</Card.Text>
