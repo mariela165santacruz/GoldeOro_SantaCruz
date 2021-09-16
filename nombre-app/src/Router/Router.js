@@ -34,25 +34,25 @@ const images = [
     id: '1',
     title: 'Awesome forest',
     image:
-      'https://cdn.pixabay.com/photo/2017/12/17/12/45/football-3024154_960_720.jpg',
+      'https://cdn.pixabay.com/photo/2020/11/18/10/18/goalkeeper-5754865_960_720.jpg',
   },
   {
     id: '2',
     title: 'A litle bird.',
     image:
-      'https://cdn.pixabay.com/photo/2016/03/21/21/18/door-husband-1271621_960_720.jpg',
+      'https://cdn.pixabay.com/photo/2016/03/21/21/20/nike-1271624_960_720.jpg',
   },
   {
     id: '3',
     title: 'The best friend.',
     image:
-      'https://cdn.pixabay.com/photo/2016/03/23/12/27/football-1274662_960_720.jpg',
+      'https://cdn.pixabay.com/photo/2014/10/14/20/24/football-488714_960_720.jpg',
   },
   {
     id: '4',
     title: 'Beautiful desert.',
     image:
-      'https://cdn.pixabay.com/photo/2014/03/18/20/21/man-290186_960_720.jpg',
+      'https://cdn.pixabay.com/photo/2016/07/21/18/11/football-1533210_960_720.jpg',
   },
 ]
 

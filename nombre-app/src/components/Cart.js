@@ -59,12 +59,7 @@ const Cart = () => {
                           <h4 className="product-title">
                             <a href="#">{product.item.title}</a>
                           </h4>
-                          <span>
-                            <em>Autor:</em> XXXX
-                          </span>
-                          <span>
-                            <em>Institución:</em> XXXX
-                          </span>
+                          
                         </div>
                       </div>
                     </td>

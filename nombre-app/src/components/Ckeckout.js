@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useContext } from "react";
 import { Form } from "react-bootstrap";
 import { CartContext } from "./Context/CartContext";
-import { getFirestore } from "../Firebase/firebase";
+import { fire } from "../Firebase/firebase";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import { Link } from "react-router-dom";
