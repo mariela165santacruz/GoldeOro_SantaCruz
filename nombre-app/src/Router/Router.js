@@ -32,27 +32,28 @@ const Router = () => {
 const images = [
   {
     id: '1',
-    title: 'Awesome forest',
-    image:
-      'https://cdn.pixabay.com/photo/2020/11/18/10/18/goalkeeper-5754865_960_720.jpg',
-  },
-  {
-    id: '2',
-    title: 'A litle bird.',
+    title: 'NOS VOLVIMOS LOCOS!!!',
     image:
       'https://cdn.pixabay.com/photo/2016/03/21/21/20/nike-1271624_960_720.jpg',
   },
   {
-    id: '3',
-    title: 'The best friend.',
+    id: '2',
+    title: '70% OFF EN NIKE',
     image:
-      'https://cdn.pixabay.com/photo/2014/10/14/20/24/football-488714_960_720.jpg',
+      'https://cdn.pixabay.com/photo/2015/09/09/18/26/green-932350_960_720.jpg',
+   
+  },
+  {
+    id: '3',
+    title: 'VESTÍ A TU EQUIPO CON LO MEJOR',
+    image:
+      'https://cdn.pixabay.com/photo/2016/07/21/18/11/football-1533210_960_720.jpg',
   },
   {
     id: '4',
-    title: 'Beautiful desert.',
+    title: 'COMPRÁ EN GOL DE ORO',
     image:
-      'https://cdn.pixabay.com/photo/2016/07/21/18/11/football-1533210_960_720.jpg',
+      'https://cdn.pixabay.com/photo/2017/12/17/12/45/football-3024154_960_720.jpg',
   },
 ]
 
