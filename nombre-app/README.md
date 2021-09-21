@@ -25,6 +25,15 @@ Actualmente el sitio presenta las siguientes caracteristicas:
    
 • Dado un formulario final confirmamos nuestra compra completando nuestros datos.
 
+## Capturas de pantalla 📷
+
+![1-react](https://user-images.githubusercontent.com/82129632/134106988-a204cf89-5ca1-44e7-8e2a-26ff99a65783.jpg)
+![2-react](https://user-images.githubusercontent.com/82129632/134106991-839c055e-5557-4ff5-89ed-a99efe43323e.jpg)
+![react-3](https://user-images.githubusercontent.com/82129632/134106992-957f2e80-2019-4112-ae58-ddece09f1bbd.jpg)
+![image](https://user-images.githubusercontent.com/82129632/134107039-46eb622f-f756-4b30-ba80-d7dde78aef6c.png)
+
+
+
 ## Pre-requisitos, Instalación y Configuración ⚙️
 
 Vamos a hacer uso de node y npm, por lo que deberas tenerlos instalados en tu maquina.
@@ -52,7 +61,7 @@ React-Icons (v4.2.0)
 
 React Router Dom (v5.2.0)
 
-Firebase Cloud Firestore (v9.0.1)
+Firebase (v9.0.1)
 
 Material Ui(v5.0.0)
 
