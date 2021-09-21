@@ -6,11 +6,7 @@ import { CartContext } from "../Components/Context/CartContext";
 import { FaTrashAlt } from "react-icons/fa";
 import { Button } from "react-bootstrap";
 
-/* const sumaTotal = () => {
-  const { items } = useContext(CartContext);
-  items.reduce((acc, cur) => acc + cur.price);
-  console.log(sumaTotal());
-}; */
+
 
 const Cart = () => {
   const { items, cartSize, clear, removeItems } = useContext(CartContext);
@@ -21,9 +17,7 @@ const Cart = () => {
       <div className="container padding-bottom-3x mb-1">
         {/* Shopping Cart*/}
         <div className="table-responsive shopping-cart">
-          {/* COMIENZO DE TABLA */}
           <table className="table">
-            {/*  COMIENZO DEL ENCABEZADO DE LA TABLA */}
             <thead>
               <tr>
                 <th>Producto</th>
@@ -40,9 +34,7 @@ const Cart = () => {
                 </th>
               </tr>
             </thead>
-            {/*  COMIENZO DEL CUERPO */}
             <tbody>
-              {/* COMIENZO DE ITEM */}
               {cartSize > 0 ? (
                 items.map((product, i) => (
                   <tr key={i}>
@@ -50,8 +42,7 @@ const Cart = () => {
                       <div className="product-item">
                         <a className="product-thumb" href="#">
                           <img
-                            /*  src="https://via.placeholder.com/220x180/5F9EA0/000000" */
-                            src={product.item.pictureUrl}
+                            src={product.item.images}
                             alt="Producto"
                           />
                         </a>
@@ -101,31 +92,7 @@ const Cart = () => {
             </tbody>
           </table>
         </div>
-        <div className="shopping-cart-footer">
-          <div className="column">
-            <form className="coupon-form" method="post">
-              <input
-                className="form-control form-control-sm"
-                type="text"
-                placeholder="Código del Cupón"
-                required
-              />
-              <button className="btn btn-outline-primary btn-sm">
-                Aplicar Cupón
-              </button>
-            </form>
-          </div>
-          <div className="column text-lg">
-            Total:{" "}
-            <span className="text-medium">
-              $
-              {items.reduce(
-                (acc, cur) => cur.item.price * cur.quantity + acc,
-                0
-              )}
-            </span>
-          </div>
-        </div>
+        
         <div className="shopping-cart-footer">
           <div className="column">
             <Link className="btn btn-outline-secondary" to="/">
@@ -134,7 +101,7 @@ const Cart = () => {
             </Link>
           </div>
           <div className="column">
-            <Button as={Link} to="/finalizar-compra">
+            <Button as={Link} to="./Checkout">
               Finalizar compra
             </Button>
           </div>

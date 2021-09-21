@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../Components/Context/CartContext";
 
-function CartWidget() {
-  // me traigo la función cartSize de mi context
+function CartWidget() {  
   const { cartSize } = useContext(CartContext);
-  /* console.log(cartSize); */
+
   return (
-    cartSize === 0 || (
+    cartSize === 100 || (
       <Link to="/cart">
         <FaShoppingCart
           size="1.5rem"

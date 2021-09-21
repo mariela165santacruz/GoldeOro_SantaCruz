@@ -5,7 +5,9 @@ import ItemListContainer from "../Components/ItemListContainer";
 import Navbar from "../Components/Navbar";
 import Cart from "../Components/Cart";
 import NotFound from "../Components/NotFound";
-
+import Contacto from "../Components/Contacto";
+import Nosotros from "../Components/Nosotros";
+import Checkout from "../Components/Ckeckout";
 import { CarouselItem } from "react-bootstrap";
 import Slider from '../Components/Slider'
 
@@ -21,8 +23,9 @@ const Router = () => {
         <Route path="/category/:categoryId" component={ItemListContainer} />
         <Route path="/item/:itemId" component={ItemDetailContainer} />
         <Route path="/cart" component={Cart} />
-        {/* <Route path="/Nosotros" component={Nosotros}/>
-        <Route path="/Contacto" component={Contacto}/> */}
+        <Route path="/Nosotros" component={Nosotros}/>
+        <Route path="/Contacto" component={Contacto}/>
+        <Route path="/Checkout" component={Checkout}/>
         <Route path="*" component={NotFound} />
       </Switch>
     </BrowserRouter>

@@ -3,14 +3,16 @@ import React, { useState } from "react";
 import { useContext } from "react";
 import { Form } from "react-bootstrap";
 import { CartContext } from "./Context/CartContext";
-import { fire } from "../Firebase/firebase";
+import { getFirestore } from "../Firebase/firebase";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
+import {Cart} from "./Cart";
+
 
 const Checkout = () => {
-  // acá cart no existe y calctotal tampoco (lo calculo en un jsx)
+  
   const { items, calcTotal } = useContext(CartContext);
   const [customerInfo, setCustomerInfo] = useState({
     name: null,
@@ -70,6 +72,8 @@ const Checkout = () => {
 
   return (
     <Container>
+       <h2>CONFIRMACIÓN DE COMPRA</h2><br/>
+        <p>Para ofrecerte mayor seguridad llena tus datos para confirmar la compra. Muchas gracias!</p>
       <Form style={{ marginTop: 30 }}>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Nombre</Form.Label>
@@ -115,5 +119,6 @@ const Checkout = () => {
     </Container>
   );
 };
+
 
 export default Checkout;

@@ -7,7 +7,7 @@ function ItemCount({ stock, initial, onAdd }) {
   // Dibujo el contador
   return (
     <div className="d-flex flex-column ">
-      <div className="d-inline-flex justify-content-center gap-5 py-4">
+      <div className="d-inline-flex justify-content-center gap-5 py-4 ">
         <button
           className="btn btn-dark "
           onClick={() => {

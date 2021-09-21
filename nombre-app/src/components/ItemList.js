@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
-function addItem({ id, price, title, pictureUrl, category, stock }, index) {
+function addItem({ id, price, title, images, category, stock }, index) {
   return (
     <div className="">
       <Item
@@ -11,7 +11,7 @@ function addItem({ id, price, title, pictureUrl, category, stock }, index) {
         id={id}
         title={title}
         price={price}
-        pictureUrl={pictureUrl}
+        images={images}
         category={category}
         stock={stock}
       />
@@ -24,8 +24,6 @@ function ItemList({ items }) {
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(items));
   }, [items]);
-
-  //creo un parametro por id
   const { categoryId } = useParams();
   //filtro
   return categoryId
