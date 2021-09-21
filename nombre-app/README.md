@@ -9,9 +9,7 @@ Gol de oro. Un sitio E-Commerce donde se venden productos e indumentaria deporti
 
 Actualmente el sitio presenta las siguientes caracteristicas:
 
-• Muestra de todos los productos publicados en la pantalla de inicio
-• Navegacion de productos por categoria
-• Busqueda de productos por nombre ingresado
+• Muestra de todos los productos publicados en la pantalla de inicio                                                                                                              • Navegacion de productos por categoria                                                                                                                                           • Busqueda de productos por nombre ingresado
 • Seleccion de un producto para ver detalles extras del mismo
     ○ Permite elegir una cantidad de un stock disponible y agregarla al carrito
 Muestra de items seleccionados en el carrito
