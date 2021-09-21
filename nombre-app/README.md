@@ -2,11 +2,22 @@
 
 Gol de oro. Un sitio E-Commerce donde se venden productos e indumentaria deportiva.
 
-## Available Scripts
+## Estado del sitio
 
-In the project directory, you can run:
+Actualmente el sitio presenta las siguientes caracteristicas:
 
+Muestra de todos los productos publicados en la pantalla de inicio
+Navegacion de productos por categoria
+Busqueda de productos por nombre ingresado
+Seleccion de un producto para ver detalles extras del mismo
+Permite elegir una cantidad de un stock disponible y agregarla al carrito
+Muestra de items seleccionados en el carrito
+Podemos ver detalles de los productos que estamos comprando (nombre, cantidad, precio)
+Opcion de eliminar productos de forma individual o en su totalidad con el boton vaciar carrito
+Dado un id de compra unico otorgado al finalizar la operacion, tenemos la posibilidad de ver detalles de la orden (Datos del usuario, items, fecha y monto total)
+![PROYECTO DE REACT](https://user-images.githubusercontent.com/82129632/134102543-44ee2c89-a940-4138-980a-637424e31632.gif)
 ### `npm start`
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
