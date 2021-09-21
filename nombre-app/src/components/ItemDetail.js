@@ -19,6 +19,7 @@ function ItemDetail({ item }) {
       <Card.Img variant="top" src={item.images} />
       <Card.Body>
         <Card.Title>{item.title}</Card.Title>
+
         <p>${item.price}</p>
 
         {setSelectedItem > 0 ? (

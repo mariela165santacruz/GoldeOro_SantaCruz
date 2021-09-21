@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
-function addItem({ id, price, title, images, category, stock }, index) {
+function addItem({ id, price, title, images, category, stock, }, index) {
   return (
     <div className="">
       <Item

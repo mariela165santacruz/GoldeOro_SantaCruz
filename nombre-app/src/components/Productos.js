@@ -1,4 +1,3 @@
-// Creo un array de objetos con mis productos
 let remoteItems = [
     {
       id: 0,

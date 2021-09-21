@@ -11,114 +11,80 @@ import "bootstrap/dist/css/bootstrap.css";
 import {Cart} from "./Cart";
 
 
-const Checkout = () => {
-  
-  const { items, calcTotal } = useContext(CartContext);
-  const [customerInfo, setCustomerInfo] = useState({
-    name: null,
-    email: null,
-    phone: null,
-  });
-  const [order, setOrder] = useState(false);
+export const Checkout = ({ handleUser, errorAlert }) => {
+    const [validated, setValidated] = useState(false);
+    const [user, setUser] = useState({
+        name: '',
+        lastname: '',
+        tel: '',
+        email: '',
+    })
 
-  const { name, email, phone } = customerInfo;
-  const isDiabledButton = !(name && email && phone);
 
-  const handleChange = (event) => {
-    setCustomerInfo({
-      ...customerInfo,
-      [event.target.name]: event.target.value,
-    });
-  };
+    const validateForm = () => {
+        if (user.name === '' || user.surname === '' || user.phone === '' || user.email === '' || user.emailConfirmation === '') {
+            errorAlert('Por favor, completa todos los campos');
+        } else {
+            if (user.email !== user.emailConfirmation) {
+                errorAlert('Por favor, verifica que tu email coincida en ambos campos');
+            } else {
+                handleUser(user);
+            }
+        }
+    }
 
-  const handleFinishPurchase = () => {
-    const db = getFirestore();
-    const orders = db.collection("orders");
-    const batch = db.batch();
-
-    const infoCart = items.map(({ item, quantity }) => ({
-      items: {
-        id: item.id,
-        title: item.title,
-        price: item.price,
-      },
-      quantity,
-    }));
-
-    const newOrder = {
-      buyer: {
-        name,
-        phone,
-        email,
-      },
-      items: infoCart,
-      date: firebase.firestore.Timestamp.fromDate(new Date()),
-      total: calcTotal(),
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        if (form.checkValidity() === true) {
+            validateForm()
+        }
+        setValidated(true);
     };
 
-    orders
-      .add(newOrder)
-      .then((response) => {
-        console.log("Productos a Firebase", response);
-        items.forEach(({ item, quantity }) => {
-          const docRef = db.collection("items").doc(item.id);
-          batch.update(docRef, { stock: item.stock - quantity });
-        });
-        batch.commit();
-      })
-      .catch((error) => console.log(error))
-      .finally(setOrder(true));
-  };
+    const handleChange = (event) => {
+        setUser({ ...user, [event.target.name]: event.target.value });
+    };
 
-  return (
-    <Container>
-       <h2>CONFIRMACIÓN DE COMPRA</h2><br/>
-        <p>Para ofrecerte mayor seguridad llena tus datos para confirmar la compra. Muchas gracias!</p>
-      <Form style={{ marginTop: 30 }}>
-        <Form.Group className="mb-3" controlId="formBasicName">
-          <Form.Label>Nombre</Form.Label>
-          <Form.Control
-            name="name"
-            type="text"
-            placeholder="Nombre"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Correo electrónico</Form.Label>
-          <Form.Control
-            name="email"
-            type="email"
-            placeholder="Ingresá tu correo"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPhone">
-          <Form.Label>Teléfono</Form.Label>
-          <Form.Control
-            name="phone"
-            type="telephone"
-            placeholder="Teléfono"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        {order ? (
-          <Link to="/">
-            <Button variant="primary">Realizar otro pedido</Button>
-          </Link>
-        ) : (
-          <Button
-            disabled={isDiabledButton}
-            variant="primary"
-            onClick={handleFinishPurchase}
-          >
-            Realizar pedido
-          </Button>
-        )}
-      </Form>
-    </Container>
-  );
-};
+    return (
+        < Form className="formSize mt-5" noValidate validated={validated} onSubmit={handleSubmit} >
+            <h2>Datos personales</h2>
+            <Form.Group>
+                <Form.Label>Nombre</Form.Label>
+                <Form.Control type="text" placeholder="Ingresa tu nombre" required onChange={handleChange} name='name' />
+
+            </Form.Group>
+
+            <Form.Group>
+                <Form.Label>Apellido</Form.Label>
+                <Form.Control type="text" placeholder="Ingresa tu apellido" onChange={handleChange} required name='lastname' />
+
+            </Form.Group>
+
+            <Form.Group>
+                <Form.Label>Telefono</Form.Label>
+                <Form.Control type="text" placeholder="Ingresa tu telefono" onChange={handleChange} required name='tel' />
+
+            </Form.Group>
+
+            <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" placeholder="Ingresa tu email" onChange={handleChange} required name='email' />
+            </Form.Group>
+
+            <Form.Group controlId="formBasicEmail2">
+                <Form.Label>Confirma tu email</Form.Label>
+                <Form.Control type="email" placeholder="Repeti tu email" onChange={handleChange} required name='emailConfirmation' />
+                <Form.Text className="text-muted">
+                    Nunca compartiremos tu direccion de email con otras personas
+                </Form.Text>
+            </Form.Group>
+
+            <Button className="mt-2" variant="dark" type="submit">Confirmar Compra</Button><br/><br/><br/>
+        </Form >
+    )
+}
+
 
 
 export default Checkout;

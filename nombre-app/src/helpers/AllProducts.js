@@ -1,5 +1,3 @@
-  
-  
 import { getFirestore } from "../Firebase/firebase";
 
 const firestore = getFirestore();
@@ -9,7 +7,6 @@ const collectSingleProduct = (id) => {
   return firestore.collection("items").doc(id).get();
 };
 
-// Retorna objeto 'product'
 export const getProductById = (id) => {
   return collectSingleProduct(id).then((res) => {
     if (res) return res;
