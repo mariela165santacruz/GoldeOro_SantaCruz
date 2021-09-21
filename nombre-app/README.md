@@ -9,15 +9,15 @@ Gol de oro. Un sitio E-Commerce donde se venden productos e indumentaria deporti
 
 Actualmente el sitio presenta las siguientes caracteristicas:
 
-Muestra de todos los productos publicados en la pantalla de inicio
-Navegacion de productos por categoria
-Busqueda de productos por nombre ingresado
-Seleccion de un producto para ver detalles extras del mismo
-Permite elegir una cantidad de un stock disponible y agregarla al carrito
+• Muestra de todos los productos publicados en la pantalla de inicio
+• Navegacion de productos por categoria
+• Busqueda de productos por nombre ingresado
+• Seleccion de un producto para ver detalles extras del mismo
+    ○ Permite elegir una cantidad de un stock disponible y agregarla al carrito
 Muestra de items seleccionados en el carrito
-Podemos ver detalles de los productos que estamos comprando (nombre, cantidad, precio)
-Opcion de eliminar productos de forma individual o en su totalidad con el boton vaciar carrito
-Dado un id de compra unico otorgado al finalizar la operacion, tenemos la posibilidad de ver detalles de la orden (Datos del usuario, items, fecha y monto total)
+○ Podemos ver detalles de los productos que estamos comprando (nombre, cantidad, precio)
+○ Opcion de eliminar productos de forma individual o en su totalidad con el boton vaciar carrito
+• Dado un id de compra unico otorgado al finalizar la operacion, tenemos la posibilidad de ver detalles de la orden (Datos del usuario, items, fecha y monto total)
 
 ## Pre-requisitos, Instalación y Configuración ⚙️
 
