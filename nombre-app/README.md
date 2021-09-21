@@ -1,7 +1,7 @@
 # Gol de oro
 
 Gol de oro. Un sitio E-Commerce donde se venden productos e indumentaria deportiva.
-
+![PROYECTO DE REACT](https://user-images.githubusercontent.com/82129632/134102543-44ee2c89-a940-4138-980a-637424e31632.gif)
 ## Estado del sitio
 
 Actualmente el sitio presenta las siguientes caracteristicas:
@@ -15,7 +15,7 @@ Muestra de items seleccionados en el carrito
 Podemos ver detalles de los productos que estamos comprando (nombre, cantidad, precio)
 Opcion de eliminar productos de forma individual o en su totalidad con el boton vaciar carrito
 Dado un id de compra unico otorgado al finalizar la operacion, tenemos la posibilidad de ver detalles de la orden (Datos del usuario, items, fecha y monto total)
-![PROYECTO DE REACT](https://user-images.githubusercontent.com/82129632/134102543-44ee2c89-a940-4138-980a-637424e31632.gif)
+
 ### `npm start`
 
 
