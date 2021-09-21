@@ -15,13 +15,13 @@ Actualmente el sitio presenta las siguientes caracteristicas:
 
 • Seleccion de un producto para verlo con detalle
 
-    ○ Permite elegir una cantidad de un stock disponible y agregarla al carrito
+   ∘ Permite elegir una cantidad de un stock disponible y agregarla al carrito
 
 •Muestra de items seleccionados en el carrito
 
-   ○ Podemos ver detalles de los productos que estamos comprando (nombre, cantidad, precio)
+   ∘ Podemos ver detalles de los productos que estamos comprando (nombre, cantidad, precio)
    
-   ○ Opcion de eliminar productos de forma individual o en su totalidad con el boton vaciar carrito
+   ∘ Opcion de eliminar productos de forma individual o en su totalidad con el boton vaciar carrito
    
 • Dado un formulario final confirmamos nuestra compra completando nuestros datos.
 
@@ -45,8 +45,12 @@ localhost:3000
 ## Herramientas usadas 🛠️
 
 ReactJs (v17.0.1)
+
 React Bootstrap (v1.4.0)
+
 React-Icons (v4.1.0)
+
 React Router Dom (v5.2.0)
+
 Firebase Cloud Firestore (v8.0.2)
 
