@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Gol de oro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Gol de oro. Un sitio E-Commerce donde se venden productos e indumentaria deportiva.
 
 ## Available Scripts
 
