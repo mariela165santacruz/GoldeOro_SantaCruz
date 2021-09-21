@@ -11,22 +11,19 @@ Actualmente el sitio presenta las siguientes caracteristicas:
 
 • Muestra de todos los productos publicados en la pantalla de inicio
 
-Navegacion de productos por categoria                                                                                                                                           • 
+• Navegacion de productos por categoria                                                                                                                                        
 
-Busqueda de productos por nombre ingresado
+• Seleccion de un producto para verlo con detalle
 
-
-Seleccion de un producto para ver detalles extras del mismo
-    
-    
     ○ Permite elegir una cantidad de un stock disponible y agregarla al carrito
 
+•Muestra de items seleccionados en el carrito
 
-Muestra de items seleccionados en el carrito
-
-○ Podemos ver detalles de los productos que estamos comprando (nombre, cantidad, precio)
-○ Opcion de eliminar productos de forma individual o en su totalidad con el boton vaciar carrito
-• Dado un id de compra unico otorgado al finalizar la operacion, tenemos la posibilidad de ver detalles de la orden (Datos del usuario, items, fecha y monto total)
+   ○ Podemos ver detalles de los productos que estamos comprando (nombre, cantidad, precio)
+   
+   ○ Opcion de eliminar productos de forma individual o en su totalidad con el boton vaciar carrito
+   
+• Dado un formulario final confirmamos nuestra compra completando nuestros datos.
 
 ## Pre-requisitos, Instalación y Configuración ⚙️
 
@@ -37,10 +34,10 @@ En primer lugar, hay que clonar el repositorio.
 git clone https://github.com/mariela165santacruz/GoldeOro_SantaCruz/edit/main/nombre-app
 Instalacion:
 
-npm install
+     ○ npm install
 Para correr la aplicacion:
 
-npm start
+     ○ npm start
 Para ver en el navegador:
 
 localhost:3000
