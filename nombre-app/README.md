@@ -30,8 +30,8 @@ Actualmente el sitio presenta las siguientes caracteristicas:
 ![1-react](https://user-images.githubusercontent.com/82129632/134106988-a204cf89-5ca1-44e7-8e2a-26ff99a65783.jpg)
 ![2-react](https://user-images.githubusercontent.com/82129632/134106991-839c055e-5557-4ff5-89ed-a99efe43323e.jpg)
 ![react-3](https://user-images.githubusercontent.com/82129632/134106992-957f2e80-2019-4112-ae58-ddece09f1bbd.jpg)
-![image](https://user-images.githubusercontent.com/82129632/134107039-46eb622f-f756-4b30-ba80-d7dde78aef6c.png)
-
+![react4](https://user-images.githubusercontent.com/82129632/134107368-2b4eb1ef-4bbe-4b71-8aa1-e5e5dc37beab.jpg)
+![react 5](https://user-images.githubusercontent.com/82129632/134107366-69d8c5c1-75e1-44dd-af64-465c893ea588.jpg)
 
 
 ## Pre-requisitos, Instalación y Configuración ⚙️
