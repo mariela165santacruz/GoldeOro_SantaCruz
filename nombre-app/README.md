@@ -1,4 +1,4 @@
-# Gol de oro
+# Gol de oro ⚽
 
 Gol de oro. Un sitio E-Commerce donde se venden productos e indumentaria deportiva.
 
@@ -44,13 +44,21 @@ localhost:3000
 
 ## Herramientas usadas 🛠️
 
-ReactJs (v17.0.1)
+ReactJs (v17.0.2)
 
-React Bootstrap (v1.4.0)
+React Bootstrap (v1.6.1)
 
-React-Icons (v4.1.0)
+React-Icons (v4.2.0)
 
 React Router Dom (v5.2.0)
 
-Firebase Cloud Firestore (v8.0.2)
+Firebase Cloud Firestore (v9.0.1)
+
+Material Ui(v5.0.0)
+
+React-Player(v2.9.0)
+
+Infinite-react-carousel(v1.2.11)
+
+
 
